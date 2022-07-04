@@ -48,3 +48,17 @@ const FizzBuzz2 = function (number) {
     console.log(output)
   }
 }
+
+//  発展☆☆ ３が大好き
+//  sentence.includes(word)     word in sentence 的な動作
+//  https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+
+const SanDaisuki = function (number) {
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 || String(i).includes("3")) {
+      console.log(`${i}!!!!!`)
+    } else {
+      console.log(i)
+    }
+  }
+}
