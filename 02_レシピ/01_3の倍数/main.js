@@ -23,3 +23,28 @@ const genkiFunction = function (number) {
     }
   }
 }
+
+//  発展☆ FizzBuzz
+
+const FizzBuzz = function (number) {
+  for (let i = 1; i <= number; i++) {
+    let output = ""
+    if (i % 3 === 0) {
+      output += "Fizz"
+    }
+    if (i % 5 === 0) {
+      output += "Buzz"
+    }
+    if (i % 3 && i % 5) {
+      output = i
+    }
+    console.log(output)
+  }
+}
+
+const FizzBuzz2 = function (number) {
+  for (let i = 1; i <= number; i++) {
+    const output = (i % 3 ? "" : "Fizz") + (i % 5 ? "" : "Buzz") || i
+    console.log(output)
+  }
+}
