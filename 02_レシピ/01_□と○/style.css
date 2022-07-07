@@ -1,0 +1,41 @@
+.square {
+  width: 100px;
+  height: 100px;
+  /* background-color: black; */
+}
+
+.rounded {
+  border-radius: 50px;
+}
+
+.transition {
+  transition: all 1s;
+}
+
+.red {
+  background-color: #f5b090;
+}
+
+.orange {
+  background-color: #fcd7a1;
+}
+
+.yellow {
+  background-color: #fff9b1;
+}
+
+.green {
+  background-color: #a5d4ad;
+}
+
+.blue {
+  background-color: #a3bce2;
+}
+
+.cyan {
+  background-color: #a59aca;
+}
+
+.purple {
+  background-color: #cfa7cd;
+}
