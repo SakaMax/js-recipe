@@ -1,0 +1,8 @@
+.memo-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.memo-text {
+  margin: 0em 0.5em 0em 0.5em;
+}
