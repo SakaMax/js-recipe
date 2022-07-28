@@ -1,8 +1,6 @@
 const quizText = document.getElementById("quiz-text")
 const quizImage = document.getElementById("quiz-image")
-const choice1 = document.getElementById("choice-1")
-const choice2 = document.getElementById("choice-2")
-const choice3 = document.getElementById("choice-3")
+const choicesContainer = document.getElementById("choices-container")
 const feedback = document.getElementById("feedback")
 
 const quiz = {
@@ -26,25 +24,24 @@ const quiz = {
 }
 
 const reloadQuiz = function () {
+  // 問題文と問題画像
   quizText.textContent = "Q. " + quiz.text
   quizImage.src = "./images/" + quiz.image
-  choice1.textContent = quiz.choices[0].text
-  choice2.textContent = quiz.choices[1].text
-  choice3.textContent = quiz.choices[2].text
+
+  // 選択肢ボタン
+  for (let i = 0; i < quiz.choices.length; i++) {
+    const choice = quiz.choices[i]
+    const choiceButtton = document.createElement("button")
+    choiceButtton.textContent = choice.text
+    choiceButtton.onclick = function () {
+      choose(i)
+    }
+    choicesContainer.append(choiceButtton)
+  }
 }
 
 const choose = function (choiceNumber) {
   feedback.textContent = quiz.choices[choiceNumber].feedback
-}
-
-choice1.onclick = function () {
-  choose(0)
-}
-choice2.onclick = function () {
-  choose(1)
-}
-choice3.onclick = function () {
-  choose(2)
 }
 
 reloadQuiz()
